@@ -62,7 +62,7 @@ def is_openai_api_key_set() -> bool:
 def main():
     if len(st.session_state) == 0:
         st.session_state["messages"] = []
-        st.session_state["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY", "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")
+        st.session_state["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY", "")
         st.session_state["url"] = ""
         if is_openai_api_key_set():
             st.session_state["pdfquery"] = PDFQuery(st.session_state["OPENAI_API_KEY"])
